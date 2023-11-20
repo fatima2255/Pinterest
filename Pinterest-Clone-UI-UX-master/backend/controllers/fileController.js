@@ -7,6 +7,7 @@ const singleUploadFile = (req, res, next) => {
             filePath : req.file.path,
             fileType : req.file.mimetype,
             fileSize : req.file.size,
+            
         };
         const saveImage = new uploadModel(file);
         saveImage.save();
