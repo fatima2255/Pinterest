@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const {router} = require('./routes/api');
+const userrouter=require('./routes/userrouter');
 const conn = mongoose.connection;
 const port = process.env.PORT || 4000;
 
@@ -16,6 +17,7 @@ conn.once('open', function() {
     console.log("MongoDB database connection established successfully");
 });
 
+// app.use('/users',userrouter);
 app.use('/file', router);
 app.use('/uploads', express.static(__dirname + '/uploads/'));
 app.listen(port, function() {

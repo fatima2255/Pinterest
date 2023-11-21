@@ -5,14 +5,18 @@ import {Provider} from "react-redux";
 import store from "./Redux/store"
 import reportWebVitals from './reportWebVitals';
 import JoinComponent from "./JoinAllComponent/JoinComponent";
-import Login from './login';
+import ogin from './login';
 import Signup from './Signup'
 
 ReactDOM.render(
     <Provider store={store} >
         <React.StrictMode>
-            {/* <Signup/> */}
-            <JoinComponent />
+        
+{/* 
+            <Signup/> */}
+            {
+               <JoinComponent /> 
+              }
             
         </React.StrictMode>
     </Provider>,
